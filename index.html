@@ -10,6 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
         }
         header {
             background-color: #333;
@@ -17,14 +18,27 @@
             padding: 20px 0;
             text-align: center;
         }
-        nav {
-            text-align: center;
-            margin-top: 10px;
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
         }
-        nav a {
-            margin-right: 15px;
-            text-decoration: none;
+        h1, h2 {
+            color: #333;
+        }
+        .news-section {
+            margin-bottom: 20px;
+        }
+        .news-item {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .news-item h3 {
             color: #007BFF;
+        }
+        .news-item p {
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -33,16 +47,37 @@
         <h1>Welcome to My Academic Website</h1>
     </header>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="bio.html">About Me</a> <!-- Link to Bio Page -->
-    </nav>
-
-    <!-- Main Content -->
     <div class="container">
-        <p>Hello! Welcome to my academic website where I share my research, teaching, and publications.</p>
+        <section class="news-section">
+            <h2>News</h2>
+
+            <!-- News Item 1 -->
+            <div class="news-item">
+                <h3>🎉 03.Apr.2025</h3>
+                <p>The <strong>Test</strong> page</p>
+                <p>Test</p>
+                <p><em>Test2</em></p>
+            </div>
+
+            <!-- News Item 2 -->
+            <div class="news-item">
+                <h3>04.Mar.2025</h3>
+                <p>Test</p>
+                <p><strong>Test Page</strong></p>
+                <p>Test Page</p>
+                <p><em>Test Page</em></p>
+            </div>
+
+            <!-- Add more news items here -->
+        </section>
+
+        <!-- Optional Visitors Section -->
+        <section class="visitors-section">
+            <h2>Visitors</h2>
+            <p>We welcome academic collaborators and visitors from around the world!</p>
+        </section>
     </div>
 </body>
 </html>
+
 
