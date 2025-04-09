@@ -77,13 +77,27 @@
             <p>Test</p>
         </section>
     </div>
+
+
     <section class="visitors-section">
     <h2>Visitor Statistics</h2>
     <p>See where our visitors are coming from:</p>
-    <!-- Flag Counter HTML Code -->
-    <div>
-        <script type="text/javascript" src="https://s01.flagcounter.com/more/your-code"></script>
-    </div>
+    <div id="visitor-info"></div>
+
+    <script>
+        async function fetchVisitorData() {
+            const response = await fetch('https://api.ipstack.com/check?access_key=YOUR_API_KEY');
+            const data = await response.json();
+            document.getElementById('visitor-info').innerHTML = `
+                <p>Country: ${data.country_name}</p>
+                <p>Region: ${data.region_name}</p>
+                <p>City: ${data.city}</p>
+            `;
+        }
+        fetchVisitorData();
+    </script>
+</section>
+
 </section>
 
 </body>
